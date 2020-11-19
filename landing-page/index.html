@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="stylesheet.css">
   <title>LA TERRE</title>
   <style>
@@ -15,8 +16,8 @@
     <img src="logo.png" class="logo">
     <div class="focal-point">
       <img src="packets.png" class="packets">
-      <p class="text">Your next best product just got here.</p>
-      <p class="text-two">La Terre *insert mission statement here*</p>
+      <p class="text">Beauty, sustainability, healthy. <br>All in the palm of your hand.</p>
+      <p class="text-two">“To enter the Heavens, we begin on earth.” La Terre is dedicated to providing our clientele a standard of beauty with products that promise sustainability to the Earth. We believe beauty is in all things, and it begins with the ground we walk upon.</p>
     </div>
     <div class="circle">
       <span class="dot">
@@ -33,19 +34,41 @@
     <!---  <img src="./stats-sheet.png" alt="stats-sheet" class="stats-sheet"> -->
     </div>
   </div>
-
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <img src="./logoThankYouNote.png" alt="logoThankYouNote" class="logoThankYouNote">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+      </div>
+    </div>
+  </div>
   <div class="sectionC">
     <div class="group-of-text">
       <h1 class="stay-updated">STAY UPDATED</h1>
       <p>Like our mission? Want to receive updates about our product? <br>Enter your email in the form below to hear the latest on our product development. <br>We're so excited to welcome you to La Terre!<br>             </p>
     </div>
     <div class="form-div">
-    <form method="post" action="/waitlist" class="form">
+    <form class="form">
+        <!--method="post" action="/waitlist"-->
       <input type="text" name="email" class="input">
       <button type="submit" class="submit">submit</button>
     </form>
     </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script>
+    $(".form").on("submit", function(event) {
+      event.preventDefault();
+      $.post("/waitlist", {
+        email:$(".input").val()
+      },
+      function(result) {
+        console.log(result);
+    }).fail(function (data){
+      console.log(data);
+      document.getElementById('id01').style.display='block'
+    })})
+  </script>
 
 </body>
 </html>
