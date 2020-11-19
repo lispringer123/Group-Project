@@ -2,13 +2,33 @@
   - Alegreya font: font-family: 'Alegreya', serif;
   - Shrikhand font: font-family: 'Shrikhand', cursive;
 */
-
 .sectionA {
+  background-color: #D0D8D7;
+}
+.logo {
+  text-align: left;
+  width: 150px;
+}
+.text {
+  font-family: 'Alegreya', serif;
+  font-size: 40px;
+  color: #303030;
+}
+.text-two {
+  font-family: 'Alegreya', serif;
+  font-size: 18px;
+  color: #303030;
+}
+.focal-point {
+  text-align: center;
+  margin-top: -45px;
+}
+.circle {
   margin: 0;
   margin-left: 0;
   margin-right: 0;
   width: 100%;
-  height: 600px;
+  height: 70px;
   background-color: #D0D8D7;
   text-align: center;
 }
@@ -18,7 +38,10 @@
   background-color: #435555;
   border-radius: 50%;
   display: inline-block;
-  top: 550px;
+}
+.arrow {
+  width: 30px;
+  margin-top: 30px;
 }
 .sectionB {
   margin: 0;
@@ -28,6 +51,17 @@
   height: 600px;
   background-color: #435555;
 }
+.stats-sheet {
+  display: inline;
+  text-align: right;
+  margin-left: 18%;
+  height: 588px;
+}
+.tablets {
+  margin-top: -721px;
+  width: 420px;
+  margin-left: 10%;
+}
 .sectionC {
   margin: 0;
   margin-left: 0;
@@ -35,4 +69,69 @@
   width: 100%;
   height: 600px;
   background-color: #6F8F7C;
+}
+.submit {
+  font-family: 'Alegreya', serif;
+  background-color: #435555;
+  color: #D0D8D7;
+}
+.input {
+  background-color: #F5F5E9;
+}
+.form {
+  text-align: center;
+}
+
+.itemA {
+  font-family: 'Alegreya', serif;
+  font-size: 30px;
+  color: #D0D8D7;
+  margin-left: 60%;
+}
+.itemB {
+  font-family: 'Alegreya', serif;
+  font-size: 30px;
+  color: #D0D8D7;
+  margin-left: 60%;
+}
+.itemC {
+  font-family: 'Alegreya', serif;
+  font-size: 30px;
+  color: #D0D8D7;
+  margin-left: 60%;
+}
+.itemD {
+font-family: 'Alegreya', serif;
+font-size: 30px;
+  color: #D0D8D7;
+  margin-left: 60%;
+}
+.itemE {
+  font-family: 'Alegreya', serif;
+  font-size: 30px;
+  color: #D0D8D7;
+  margin-left: 60%;
+}
+.tablet-dissolving {
+  display: inline;
+  text-align: left;
+}
+.group-of-text {
+  text-align: center;
+  margin-top: -45px;
+  background-color: #6F8F7C;
+}
+.stay-updated {
+  font-family: 'Shrikhand', cursive;
+  color: #F5F5E9;
+  background-color: #6F8F7C;
+  font-size: 48px;;
+}
+p {
+  font-family: 'Alegreya', serif;
+  font-size: 20px;
+  margin-left: 20%;
+  margin-right: 20%;
+  line-height: 170%;
+  color: #F5F5E9;
 }
