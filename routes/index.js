@@ -16,7 +16,9 @@ router.post('/waitlist', async function(req, res){
     email: data.email,
   });
   console.log('Hello World');
-  res.redirect('/');
+  //res.redirect('/');
+  res.status(200);
+  res.end();
 
   //line to submit email to DB
 });

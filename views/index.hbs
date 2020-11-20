@@ -1,6 +1,59 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
-<form method="post" action="/waitlist">
-  <input type="text" name="email">
-  <button type="submit">Submit</button>
-</form>
+
+<div class="sectionA">
+  <img src="logo.png" class="logo">
+  <div class="focal-point">
+    <img src="packets.png" class="packets">
+    <p class="text">Beauty, sustainability, healthy. <br>All in the palm of your hand.</p>
+    <p class="text-two">“To enter the Heavens, we begin on earth.” La Terre is dedicated to providing our clientele a standard of beauty with products that promise sustainability to the Earth. We believe beauty is in all things, and it begins with the ground we walk upon.</p>
+  </div>
+  <div class="circle">
+    <span class="dot">
+      <img src="./arrow.png" alt="arrow" class="arrow">
+    </span>
+  </div>
+</div>
+
+<div class="sectionB">
+  <div class="tablets-div">
+    <img src="./tablets.png" alt="tablets" class="tablets">
+  </div>
+  <div class="stats-sheet-div">
+  <!---  <img src="./stats-sheet.png" alt="stats-sheet" class="stats-sheet"> -->
+  </div>
+</div>
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <img src="./logoThankYouNote.png" alt="logoThankYouNote" class="logoThankYouNote">
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+    </div>
+  </div>
+</div>
+<div class="sectionC">
+  <div class="group-of-text">
+    <h1 class="stay-updated">STAY UPDATED</h1>
+    <p>Like our mission? Want to receive updates about our product? <br>Enter your email in the form below to hear the latest on our product development. <br>We're so excited to welcome you to La Terre!<br>             </p>
+  </div>
+  <div class="form-div">
+  <form class="form">
+      <!--method="post" action="/waitlist"-->
+    <input type="text" name="email" class="input">
+    <button type="submit" class="submit">submit</button>
+  </form>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script>
+  $(".form").on("submit", function(event) {
+    event.preventDefault();
+    $.post("/waitlist", {
+      email:$(".input").val()
+    },
+    function(result) {
+      $(".form").replaceWith('<img src="/logoThankYouNote.png" class="logoThankYouNote">')
+      console.log("running first function");
+  }).fail(function (data){
+    console.log("running second function");
+    document.getElementById('id01').style.display='block'
+  })})
+</script>
