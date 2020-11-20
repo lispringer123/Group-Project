@@ -2,6 +2,9 @@
   - Alegreya font: font-family: 'Alegreya', serif;
   - Shrikhand font: font-family: 'Shrikhand', cursive;
 */
+body {
+  background-color: #6F8F7C!important;
+}
 .sectionA {
   background-color: #D0D8D7;
 }
@@ -19,6 +22,8 @@
   font-family: 'Alegreya', serif;
   font-size: 18px;
   color: #303030;
+  background-color: #6F8F7C;
+  padding-top: 0%;
 }
 .focal-point {
   text-align: center;
@@ -105,6 +110,7 @@
 }
 .form-div {
   padding-top: 10px;
+  background-color: #6F8F7C;
 }
 .tablet-dissolving {
   display: inline;
@@ -125,19 +131,23 @@
 }
 p {
   font-family: 'Alegreya', serif;
-  font-size: 20px;
+  font-size: 16px;
   margin-left: 20%;
   margin-right: 20%;
   line-height: 170%;
   color: #303030;
-  padding-bottom: 1%;
+  padding-bottom: 0%;
 }
 .modal {
   display: none;
 }
+.formThankyou {
+  background-color: #6F8F7C;
+}
 .logoThankYouNote {
-  display: inline;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  background-color: #6F8F7C;
 }
 .w3-modal-content {
   margin: auto;
@@ -149,4 +159,7 @@ p {
 }
 .w3-container, .w3-panel {
   padding: 0;
+  display: inline;
+  text-align: center;
+  background-color: #6F8F7C;
 }
